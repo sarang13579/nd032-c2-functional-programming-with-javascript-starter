@@ -37,13 +37,13 @@ class WarpDrive {
 
 // Because we are working with classes now, we have to instantiate the class before we use it
 
-let enterprise_warp = new WarpDrive('Dilithium Chrystal')
+let enterprise_warp = new WarpDrive('Dilithium Chrystal', 'Mr');
 
 // NOTE: This is a big win for the object oriented style - it is so easy to make multiple instances of WarpDrive
 // Our program could simultaneously reference as many warp drive as instances as we want -- how would you do that in the imperative program?
 
-enterprise_warp.set_warp(2)
+enterprise_warp.set_warp(2);
 
-console.log(enterprise_warp.status_report())
+console.log(enterprise_warp.status_report());
 
 // expected output: Captain, the engines are active and we could go faster.
