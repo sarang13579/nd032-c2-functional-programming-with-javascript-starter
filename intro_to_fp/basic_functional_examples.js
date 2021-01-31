@@ -5,8 +5,14 @@
 // Hint - this will help with time of day: new Date().getHours()
 // -----------------------------------------------------------------
 
+function greet(){
+    const time = new Date().getHours();
+    const say = ((time > 12) && (time < 17)) ? "good afternoon" : "good morning";
+    
+    return say;
+}
 
-
+console.log(greet());
 
 // -----------------------------------------------------------------
 // Exercise 2
@@ -15,4 +21,12 @@
 //       zero.
 // -----------------------------------------------------------------
 
+function arr(items){
+    const a = [];
+    for(let i=items; i>=0; i--){
+        a.push(i);
+    }
+    return a;
+}
 
+console.log(arr(8));
