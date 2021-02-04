@@ -3,6 +3,9 @@ const text = ['The ships', 'hung in the sky,', 'much the way', 'that bricks don`
 
 // Your Code Here
 
+const result = text.reduce((fused, single) => (fused+' ') + single);
+console.log(result);
+
 // expected output: "The ships hung in the sky, much the way that bricks don't"
 
 // ----------------------------------------------------------
@@ -28,6 +31,10 @@ const scores = [
 ]
 
 // Your Code Here
+
+const result1 = scores.reduce((x,y) => ((y.score)>=(x.score))? y : x);
+
+console.log(result1.team);
 
 // expected output: "C"
 
@@ -58,5 +65,19 @@ const ships = [
 ]
 
 // Your Code Here
+
+const result2 = ships.reduce((previous, current) => {
+    const cspeed = parseInt(current.speed.slice(0, -1));
+    const previousSpeed = parseInt(previous.speed.slice(0, -1));
+    // if (cspeed > previousSpeed) {
+    //     return current;
+    // }
+    // return previous;
+    return (cspeed>previousSpeed)?current:previous;   /// Return statement is important, for arrow function with more than 1 statements
+
+}
+);
+
+console.log(result2.name);
 
 // Expected output: Tie Fighters
