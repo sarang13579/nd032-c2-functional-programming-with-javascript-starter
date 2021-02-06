@@ -11,11 +11,16 @@ const characters = [
     ['Professor X', 'Wolverine', 'Quicksilver', ['Magneto']]
 ]
 
-const results = characters.flat(1)
-// const results = characters.flat(2)
-// const results = characters.flat(3)
+const results = characters.flat()
+const results1 = characters.flat(2)
+const results2 = characters.flat(3)
 // And what happens if you go past the max depth of the array?
-// const results = characters.flat(5)
+const results3 = characters.flat(5)
+
+console.log(results);
+console.log(results1);
+console.log(results2);
+console.log(results3);
 
 // ----------------------------------------------------------
 // FIND EXERCISE
@@ -33,6 +38,8 @@ const ids = [
     'IUABC'
 ]
 
+const results4 = ids.find(X => X==='ABCKO');
+console.log(results4);
 
 // ----------------------------------------------------------
 // INCLUDE EXERCISES
@@ -51,6 +58,10 @@ const admins = [
     '12mnz09v87bas78fb12',
     '098Xc8x76m3nb4aposi'
 ]
+
+const results5 = admins.includes(currentUserId);
+
+console.log(results5, '\n');
 
 // ----------------------------------------------------------
 
@@ -75,3 +86,24 @@ const B = [
     '298374naskdj273ubsl',
     '098LKJnsvijevkwejf6'
 ]
+
+const C = A.filter(item => {
+    console.log(B.includes(item))
+    return B.includes(item)
+ 
+ })
+ 
+ console.log(C);
+
+
+//  o/p :
+       
+// false
+// true
+// false
+// false
+// false
+// false
+// false
+// false
+// [ '2389sakvjhw8e7f09fv' ]
