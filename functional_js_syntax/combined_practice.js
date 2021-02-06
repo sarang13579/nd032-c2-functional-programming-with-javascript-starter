@@ -102,6 +102,11 @@ const characters = [
 
 // Your Code here
 
+const result = characters.filter(choose => 
+choose.role === 'Captain').map(c => c.name);
+
+console.log(result);
+
 // expected output: ['Mal Reynolds', 'Kathryn Janeway']
 
 // ----------------------------------------------------------
