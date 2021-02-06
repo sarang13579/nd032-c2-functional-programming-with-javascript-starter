@@ -42,3 +42,5 @@ state = Object.assign(state, incomingState);
 // } 
 
 // Your Code here
+
+console.log(state);
