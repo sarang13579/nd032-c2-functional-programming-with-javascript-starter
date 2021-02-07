@@ -219,6 +219,26 @@ const groupedCharacters = characters
 
 // Your Code here
 
+const groupByUniverse = (acc, curr, i, arr) => {
+  acc[curr.universe] = acc[curr.universe] === undefined ? [] : acc[curr.universe]
+  acc[curr.universe].push(curr)
+
+  if (i + 1 == arr.length) {
+      return Object.entries(acc)
+          .filter(([_, characters]) => characters.length === 1)
+          .map(([_, characters]) => characters[0])
+  }
+
+  return acc
+}
+
+const soloCharacters = characters
+  .reduce(groupByUniverse, {})
+  .map(character => character.name)
+  .join(', ')
+
+console.log('soloCharacters:', soloCharacters)
+
 // expected output: [ Marvin the Paranoid Android, Peter Venkman, Dr. Daniel Jackson ]
 
 // ----------------------------------------------------------
