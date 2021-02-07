@@ -251,4 +251,10 @@ console.log('soloCharacters:', soloCharacters)
 
 // Your code here
 
+const avgPowerLvl = characters
+    .map(c => c.power_level)
+    .reduce((acc, curr, i) => (acc += curr) / i)
+
+console.log('avgPowerLvl:', avgPowerLvl)
+
 // expected output: 68.71319452795147
