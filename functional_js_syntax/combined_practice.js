@@ -119,6 +119,24 @@ console.log(result);
 
 // Your Code here
 
+// SOLUTION explanation : Makes Object array of Each UNIVERSES by defining them and 
+// pushing/adding to their respective universes (acc[curr.universe].push(curr)) 
+// => curr is current array received in iteration through arrow function
+
+const groupedCharacters = characters
+    .reduce((acc, curr, i, arr) => {
+        acc[curr.universe] = acc[curr.universe] === undefined ? [] : acc[curr.universe]
+        acc[curr.universe].push(curr)
+
+        if (i + 1 == arr.length) {
+            return Object.values(acc)
+        }
+
+        return acc
+ }, {})
+
+ console.log(groupedCharacters);
+
 // expected output:
 
 // [ 
