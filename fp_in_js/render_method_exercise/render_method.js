@@ -8,13 +8,32 @@ const Welcome = () => {
 
 const App = () => {
     return `
+        <div id='menu'>${Menu(false)}</div>
         <h1>${Welcome()}<h1>
-        <div> I EXIST! </div>
+        <div> I EXIST YES! </div>
+        
     `
 }
 
 const render = root => {
     root.innerHTML = App()
+}
+
+const Menu = (show) => {
+    if (show) {
+        return `
+                <nav>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>Login</li>
+                    </ul>
+                </nav>
+        `
+    }
+        return `
+        <nav>Menu</nav>
+        `
 }
 
 render(root)
@@ -33,3 +52,4 @@ render(root)
 {/* <nav>Menu</nav> */ }
 
 // Your Code Here
+
