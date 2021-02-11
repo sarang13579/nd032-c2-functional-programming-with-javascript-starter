@@ -32,3 +32,8 @@ window.addEventListener('load', () => {
 // This won't be a pure function, instead of a return, call the render method again
 
 // Your Code
+
+const updateStore = (store, new_State) => {
+    store = Object.assign.apply(store, new_State);
+    render(root, store);
+}
